@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <h1>Expense Tracker</h1>
+    <p>Catat pengeluaran harian dengan Local Storage</p>
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="projects.html">Projects</a>
+    <a class="active" href="expense.html">Expense Tracker</a>
+    <a href="todo.html">To-Do</a>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h2>Tambah Pengeluaran</h2>
+
+      <form id="expenseForm" class="form">
+        <input type="text" id="title" placeholder="Nama Pengeluaran" required />
+        <input type="number" id="amount" placeholder="Jumlah (Rp)" required />
+        <input type="date" id="date" required />
+        <button class="btn" type="submit">Tambah</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Daftar Pengeluaran</h2>
+      <div class="filter-area">
+        <input type="date" id="filterDate" />
+        <button class="btn small" id="resetFilter">Reset</button>
+      </div>
+
+      <ul id="expenseList" class="list"></ul>
+
+      <h3>Total: Rp <span id="totalExpense">0</span></h3>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 - Expense Tracker</p>
+  </footer>
+
+  <script src="js/expense.js"></script>
+</body>
+</html>
